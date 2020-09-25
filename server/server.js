@@ -4,6 +4,7 @@ const express = require("express"),
   db = require("./db"),
   app = express();
 
+app.use(cors());
 app.use(express.json());
 
 //ROUTES//
