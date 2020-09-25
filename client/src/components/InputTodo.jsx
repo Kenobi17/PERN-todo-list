@@ -16,6 +16,7 @@ const InputTodo = () => {
         description: description,
       });
       addTodo(response.data.data.todo);
+      setDescription("");
     } catch (err) {
       console.error(err.message);
     }
