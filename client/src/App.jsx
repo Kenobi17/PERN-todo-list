@@ -1,11 +1,14 @@
 import React from "react";
 import InputTodo from "./components/InputTodo";
+import { TodoContextProvider } from "./context/TodoContext";
 
 function App() {
   return (
-    <div className="App container">
-      <InputTodo />
-    </div>
+    <TodoContextProvider>
+      <div className="App container">
+        <InputTodo />
+      </div>
+    </TodoContextProvider>
   );
 }
 
