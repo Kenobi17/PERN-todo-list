@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { TodoContext } from "../context/TodoContext";
 import TodoAPI from "../apis/TodoAPI";
 
@@ -9,7 +9,6 @@ const ListTodos = () => {
       try {
         const response = await TodoAPI.get("/");
         setTodos(response.data.data.todos);
-        console.log(response.data.data.todos);
       } catch (err) {
         console.error(err.message);
       }

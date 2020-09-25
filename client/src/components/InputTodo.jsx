@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
-import TodoAPI from "../apis/TodoAPI";
 import { TodoContext } from "../context/TodoContext";
+import TodoAPI from "../apis/TodoAPI";
 
 const InputTodo = () => {
   const { addTodo } = useContext(TodoContext);
