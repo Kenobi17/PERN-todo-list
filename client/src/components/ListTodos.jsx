@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import { TodoContext } from "../context/TodoContext";
+import EditTodo from "./EditTodo";
 import TodoAPI from "../apis/TodoAPI";
 
 const ListTodos = () => {
@@ -44,7 +45,7 @@ const ListTodos = () => {
               <tr key={todo.id}>
                 <td>{todo.description}</td>
                 <td>
-                  <button className="btn btn-warning">Edit</button>
+                  <EditTodo todo={todo} allTodos={todos} />
                 </td>
                 <td>
                   <button
