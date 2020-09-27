@@ -1,13 +1,10 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext } from "react";
 import { TodoContext } from "../context/TodoContext";
 import TodoAPI from "../apis/TodoAPI";
 
-const EditTodo = ({ todo, allTodos }) => {
+const EditTodo = ({ todo }) => {
   const [description, setDescription] = useState(todo.description);
   const { todos, setTodos } = useContext(TodoContext);
-  useEffect(() => {
-    setTodos(allTodos);
-  }, []);
   const handleChange = (e) => {
     const { value } = e.currentTarget;
     setDescription(value);

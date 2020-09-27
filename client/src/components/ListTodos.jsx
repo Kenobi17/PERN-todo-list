@@ -15,7 +15,7 @@ const ListTodos = () => {
       }
     };
     fetchData();
-  }, []);
+  }, [setTodos]);
   const handleDelete = async (e, id) => {
     try {
       e.stopPropagation();
@@ -45,7 +45,7 @@ const ListTodos = () => {
               <tr key={todo.id}>
                 <td>{todo.description}</td>
                 <td>
-                  <EditTodo todo={todo} allTodos={todos} />
+                  <EditTodo todo={todo} />
                 </td>
                 <td>
                   <button
